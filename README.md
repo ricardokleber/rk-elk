@@ -97,5 +97,6 @@ docker exec -it kibana bin/kibana-verification-code
 ### Seu sistema ELK está instalado, configurado e pronto para iniciar a ingestão, processamento e visualização de dados.
 <img width="610" height="433" src="https://github.com/user-attachments/assets/beb0ca5e-f1c9-4883-8b1c-38114a500765" />
 
-
-
+***
+## Veja o Vídeo com o Tutorial na Prática no Youtube:
+<a href="https://www.youtube.com/@rkifrn" target="_blank"><img width="400" height="120" alt="assistavideo" src="https://github.com/user-attachments/assets/c3ceb2d8-daba-4864-9613-15aebf301423" /></a>
