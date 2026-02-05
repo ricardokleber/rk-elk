@@ -76,6 +76,18 @@ docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-create-
 
 <img width="444" height="333" src="https://github.com/user-attachments/assets/66c0c71f-f774-482d-ad9a-0622fe156bc2" />
 
-### 10. Clique no botão 'Configure Elastic' e então o sistema solicitação um código de Verificação.
+### 10. Clique no botão 'Configure Elastic' e então o sistema solicitará um código de Verificação.
 <img width="444" height="333" src="https://github.com/user-attachments/assets/ce696dfa-6379-4488-82a0-2236e7d4ca73" />
+
+### 11. Usando o terminal solicite agora que o Kibana gere um 'Código de Validação':
+
+```
+docker exec -it kibana bin/kibana-verification-code
+```
+### O Resultado será algo como:
+
+`Your verification code is:  569 844`
+
+### Insira este código no navegador e pronto!!!
+<img width="444" height="360" src="https://github.com/user-attachments/assets/3d17c3a6-efc4-4ff2-94a7-4122504d10b8" />
 
