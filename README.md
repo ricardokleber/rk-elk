@@ -45,4 +45,21 @@ docker compose logs -f elasticsearch
 ```
 docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
 ```
+## O Resultado será algo como:
 
+`Password for the [elastic] user successfully reset.`
+
+`New value: sqyTGEXI=CpgcWGDEyNY`
+
+## A senha do usuário será esse valor indicado em 'New value' (copie e guarde para acessar o sistema).
+
+### 7. Usando um navegador acesse o Elasticsearch usando a URL:
+```
+http://localhost:9200
+```
+
+### Forneça como credenciais o login 'elastic' e a senha gerada no tópico anterior:
+<img width="394" height="201" src="https://github.com/user-attachments/assets/27b6114f-2017-4440-bb8b-9ab2074eb9c7" />
+
+## O Resultado será algo como:
+<img width="394" height="247" src="https://github.com/user-attachments/assets/1f41d19a-798f-4b93-a3bd-6e5cc2aaea55" />
