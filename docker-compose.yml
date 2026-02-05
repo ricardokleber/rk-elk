@@ -1,0 +1,47 @@
+services:
+  elasticsearch:
+    image: ricardokleber/rk-elasticsearch:latest
+    container_name: elasticsearch
+    restart: always
+    volumes:
+    - elastic_data:/usr/share/elasticsearch/data/
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      discovery.type: single-node
+    ports:
+    - '9200:9200'
+#    - '9300:9300'
+    networks:
+      - elk
+
+  logstash:
+    image: ricardokleber/rk-logstash:latest
+    container_name: logstash
+    restart: always
+    depends_on:
+      - elasticsearch
+# Ative aqui as portas que o Logstash usará para receber Logs
+#    ports:
+#    - '9600:9600'
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+
+  kibana:
+    image: ricardokleber/rk-kibana:latest
+    container_name: kibana
+    restart: always
+    ports:
+    - '5601:5601'
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    networks:
+      - elk
+volumes:
+  elastic_data: {}
+
+networks:
+  elk:
