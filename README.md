@@ -91,3 +91,6 @@ docker exec -it kibana bin/kibana-verification-code
 ### Insira este código no navegador e pronto!!!
 <img width="444" height="360" src="https://github.com/user-attachments/assets/3d17c3a6-efc4-4ff2-94a7-4122504d10b8" />
 
+### Após alguns segundos de configuração do ambiente, a tela de login do Elasticsearch solicitará novamente o login/senha (login = elastic e senha gerada para o acesso ao Elasticsearch):
+<img width="444" height="290" src="https://github.com/user-attachments/assets/6d9fc821-b258-4137-b605-2dee83858f4e" />
+
