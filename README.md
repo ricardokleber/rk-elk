@@ -45,13 +45,13 @@ docker compose logs -f elasticsearch
 ```
 docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
 ```
-## O Resultado será algo como:
+### O Resultado será algo como:
 
 `Password for the [elastic] user successfully reset.`
 
 `New value: sqyTGEXI=CpgcWGDEyNY`
 
-## A senha do usuário será esse valor indicado em 'New value' (copie e guarde para acessar o sistema).
+### A senha do usuário será esse valor indicado em 'New value' (copie e guarde para acessar o sistema).
 
 ### 7. Usando um navegador acesse o Elasticsearch e digite a URL:
 ```
@@ -61,7 +61,7 @@ http://localhost:9200
 ### Forneça como credenciais o login 'elastic' e a senha gerada no tópico anterior:
 <img width="394" height="201" src="https://github.com/user-attachments/assets/27b6114f-2017-4440-bb8b-9ab2074eb9c7" />
 
-## O Resultado será algo como:
+### O Resultado será algo como:
 <img width="394" height="247" src="https://github.com/user-attachments/assets/1f41d19a-798f-4b93-a3bd-6e5cc2aaea55" />
 
 ## Se o resultado foi este arquivo no formato JSON, O Elasticsearch está funcionando normalmente e a senha gerada foi aceita para autenticação no sistema.
@@ -70,13 +70,17 @@ http://localhost:9200
 ```
 http://localhost:5601
 ```
-## O sistema solicitará um 'Token' para autorizar o acesso...
+### O sistema solicitará um 'Token' para autorizar o acesso...
 
 ### 9. Usando o terminal solicite agora que o Elasticsearch crie o 'token' de autenticação do Kibana no Elasticsearch:
 
 ```
 docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 ```
-## O Resultado será algo como:
+### O Resultado será algo como:
 
 `eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMTcyLjE4LjAuMjo5MjAwIl0sImZnciI6Ijg4YjY1OGMyMGQ1N2FlNDFjNzJjYTg0ODljOGQ0N2EyZTY1YWVkMDg4ZjIzMmUxMWFiNzFmYmQ0NDI2Zjk1MjkiLCJrZXkiOiI1Qmp4TFp3QmZJRlBFajJYM0d2MTphSG9LbUREV0toMUo5SmotRUVLRjJnIn0=`
+
+### Copie esse token para a área de transferência e cole na caixa de diálogo aberta no navegador ao tentar acessar o Kibana.
+
+<img width="444" height="333" src="https://github.com/user-attachments/assets/66c0c71f-f774-482d-ad9a-0622fe156bc2" />
