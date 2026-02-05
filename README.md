@@ -99,4 +99,4 @@ docker exec -it kibana bin/kibana-verification-code
 
 ***
 ## Veja o Vídeo com o Tutorial na Prática no Youtube:
-<a href="https://www.youtube.com/@rkifrn" target="_blank"><img width="400" height="120" alt="assistavideo" src="https://github.com/user-attachments/assets/c3ceb2d8-daba-4864-9613-15aebf301423" /></a>
+<a href="[https://www.youtube.com/watch?v=jDQB2hnmlAQ](https://www.youtube.com/watch?v=_ld6pQMpnwc)" target="_blank"><img width="400" height="120" alt="assistavideo" src="https://github.com/user-attachments/assets/c3ceb2d8-daba-4864-9613-15aebf301423" /></a>
