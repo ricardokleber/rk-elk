@@ -94,3 +94,8 @@ docker exec -it kibana bin/kibana-verification-code
 ### Após alguns segundos de configuração do ambiente, a tela de login do Elasticsearch solicitará novamente o login/senha (login = elastic e senha gerada para o acesso ao Elasticsearch):
 <img width="444" height="290" src="https://github.com/user-attachments/assets/6d9fc821-b258-4137-b605-2dee83858f4e" />
 
+### Seu sistema ELK está instalado, configurado e pronto para iniciar a ingestão, processamento e visualização de dados.
+<img width="610" height="433" src="https://github.com/user-attachments/assets/beb0ca5e-f1c9-4883-8b1c-38114a500765" />
+
+
+
