@@ -13,34 +13,25 @@ docker pull ricardokleber/rk-kibana:latest
 docker pull ricardokleber/rk-logstash:latest
 ```
 
-### 2. Crie um diretório para o projeto:
-
-```
-mkdir rk-elk
-```
-```
-cd rk-elk
-```
-
-### 3. Baixe o docker-compose pronto usando 'git clone':
+### 2. Baixe o docker-compose pronto usando 'git clone':
 
 ```
 git clone https://github.com/ricardokleber/rk-elk.git
 ```
 
-### 4. Crie/instale os Dockers:
+### 3. Crie/instale os Dockers:
 
 ```
 docker compose up -d
 ```
 
-### 5. O contêiner que mais demora para ficar pronto (e que todos os demais dependem dele) é o Elasticsearch. Verifique se os logs param de ser gerados para que você possa seguir nas próximas configurações:
+### 4. O contêiner que mais demora para ficar pronto (e que todos os demais dependem dele) é o Elasticsearch. Verifique se os logs param de ser gerados para que você possa seguir nas próximas configurações:
 
 ```
 docker compose logs -f elasticsearch
 ```
 
-### 6. Solicite agora que o Elasticsearch crie uma senha randômica para o usuário administrativo 'elastic':
+### 5. Solicite agora que o Elasticsearch crie uma senha randômica para o usuário administrativo 'elastic':
 
 ```
 docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
@@ -53,7 +44,7 @@ docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-reset-p
 
 ### A senha do usuário será esse valor indicado em 'New value' (copie e guarde para acessar o sistema).
 
-### 7. Usando um navegador acesse o Elasticsearch e digite a URL:
+### 6. Usando um navegador acesse o Elasticsearch e digite a URL:
 ```
 http://localhost:9200
 ```
@@ -66,13 +57,13 @@ http://localhost:9200
 
 ## Se o resultado foi este arquivo no formato JSON, O Elasticsearch está funcionando normalmente e a senha gerada foi aceita para autenticação no sistema.
 
-### 8. Agora você poderá então acessar o Kibana, usando um navegador e digitando a URL:
+### 7. Agora você poderá então acessar o Kibana, usando um navegador e digitando a URL:
 ```
 http://localhost:5601
 ```
 ### O sistema solicitará um 'Token' para autorizar o acesso...
 
-### 9. Usando o terminal solicite agora que o Elasticsearch crie o 'token' de autenticação do Kibana no Elasticsearch:
+### 8. Usando o terminal solicite agora que o Elasticsearch crie o 'token' de autenticação do Kibana no Elasticsearch:
 
 ```
 docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
@@ -81,6 +72,10 @@ docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-create-
 
 `eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMTcyLjE4LjAuMjo5MjAwIl0sImZnciI6Ijg4YjY1OGMyMGQ1N2FlNDFjNzJjYTg0ODljOGQ0N2EyZTY1YWVkMDg4ZjIzMmUxMWFiNzFmYmQ0NDI2Zjk1MjkiLCJrZXkiOiI1Qmp4TFp3QmZJRlBFajJYM0d2MTphSG9LbUREV0toMUo5SmotRUVLRjJnIn0=`
 
-### Copie esse token para a área de transferência e cole na caixa de diálogo aberta no navegador ao tentar acessar o Kibana.
+### 9. Copie esse token para a área de transferência e cole na caixa de diálogo aberta no navegador ao tentar acessar o Kibana.
 
 <img width="444" height="333" src="https://github.com/user-attachments/assets/66c0c71f-f774-482d-ad9a-0622fe156bc2" />
+
+### 10. Clique no botão 'Configure Elastic' e então o sistema solicitação um código de Verificação.
+<img width="444" height="333" src="https://github.com/user-attachments/assets/ce696dfa-6379-4488-82a0-2236e7d4ca73" />
+
